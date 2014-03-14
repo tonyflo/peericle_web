@@ -1,0 +1,3 @@
+This file is for the purpose of testing push email notifications.
+This file can be deleted once push email notifications have been
+tested and verrified.
