@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ScienceShare-Register</title>
+
+<style>
+#navbar a, li, ul, a{
+	font: Tahoma, Geneva, sans-serif;
+	font-size:16px;
+	text-decoration:none;
+	color:#000;
+	list-style-type:none;
+	background-color:#CCC;
+}
+#vidbox {
+	background-color:#CCC;	
+}
+#regbox {
+	background-color:#CCC;	
+}
+#keypoints {
+	background-color:#CCC;	
+}
+
+</style>
+<link href="SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css" />
+<link href="SpryAssets/SpryValidationSelect.css" rel="stylesheet" type="text/css" />
+<link href="SpryAssets/SpryValidationConfirm.css" rel="stylesheet" type="text/css" />
+<link href="SpryAssets/SpryValidationPassword.css" rel="stylesheet" type="text/css" />
+<link href="SpryAssets/SpryValidationRadio.css" rel="stylesheet" type="text/css" />
+<script src="SpryAssets/SpryValidationTextField.js" type="text/javascript"></script>
+<script src="SpryAssets/SpryValidationSelect.js" type="text/javascript"></script>
+<script src="SpryAssets/SpryValidationConfirm.js" type="text/javascript"></script>
+<script src="SpryAssets/SpryValidationPassword.js" type="text/javascript"></script>
+<script src="SpryAssets/SpryValidationRadio.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+<!-- NAVIGATION BAR -->
+<nav>
+    <ul>
+    	<li id="navbar">ScienceShare</li>
+		<form action="" method="get" name="Search">
+        <input name="Search" type="text" value="" size="80" maxlength="300" />
+    	<input name="Search" type="submit" value="Search" />
+        </form>
+    	<li id="navbar"><a href="index.html">Home</a></li>
+    	<li id="navbar"><a href="profile.html">Profile</a></li>
+    	<li id="navbar"><a href="signup.html">Sign Up</a></li>        
+    </ul>
+</nav>
+
+<!-- Video Player -->
+<div id="vidbox">
+    <h1>Play Me!</h1>
+  <img src="img/BackgroundVideo.JPG" width="363" height="242" alt="ExplanationVideo"/> 
+</div>
+
+<!-- Registration Box -->
+<div id="regbox">
+	<h2>Create your account</h2>
+<form action="submit.php" method="get" name="Registration">
+<!-- First -->
+  <span id="sprytextfield1">
+    	<label for="First">First:</label>
+    	<input type="text" name="First" id="First" />
+    	<span class="textfieldRequiredMsg">Type your first name here.</span></span>
+<br />
+
+<!-- Last -->
+   	  <span id="sprytextfield1">
+    	<label for="Last">Last:</label>
+    	<input type="text" name="Last" id="Last" />
+    	<span class="textfieldRequiredMsg">Type your last name here.</span></span>
+<br />
+
+<!-- Email -->
+   	  <span id="sprytextfield1">
+    	<label for="Email">Email:</label>
+    	<input type="email" name="Email" id="Email" />
+    	<span class="textfieldRequiredMsg">Type your email here.</span></span>
+<br />
+
+<!-- Password -->
+    <span id="sprypassword1">
+    <label for="Password">Password:</label>
+    <input type="password" name="Password" id="Password" />
+    <span class="passwordRequiredMsg">A value is required.</span></span>
+<br />
+
+<!-- Confirm -->
+    <span id="spryconfirm1">
+    <label for="Confirm">Confirm Password:</label>
+    <input type="password" name="Confirm" id="Confirm" />
+    <span class="confirmRequiredMsg">A value is required.</span><span class="confirmInvalidMsg">The values don't match.</span></span>
+<br />
+
+<!-- Role -->
+<h3>Choose your role:</h3>
+
+<span id="spryselect3">
+<label for="role"></label>
+<select name="role" id="role">
+<option>Scientist</option>
+<option>Blogger</option>
+<option>Videographer</option>
+<option>Artist</option>
+</select>
+<span class="selectRequiredMsg">Please select an item.</span></span>
+
+
+<!-- Institution -->
+<h3>Choose your institution:</h3>
+
+<span id="spryselect3">
+<label for="role"></label>
+<select name="role" id="role">
+<option>Kutztown University of Pennsylvania</option>
+<option>Woods Hole Oceanographic Institution</option>
+<option>Texas AM</option>
+<option>University of Michigan</option>
+<option>Shippensberg University</option>
+<option>Edinboro University</option>
+<option>Albright College</option>
+<option>Alvernia University</option>
+
+</select>
+<span class="selectRequiredMsg">Please select an item.</span></span>
+
+<br />
+<br />
+
+<input name="Submit" type="reset" value="Submit" />
+<br />
+<br />
+
+<a href="newprofile.html">Continue</a>
+
+</form>
+</div>
+
+<!-- What you can do on the Website -->
+<div id="keypoints">
+    <h2>Share</h2>
+    	<p>all of your outreach material</p>
+    <h2>Follow</h2>
+    	<p>what others are doing</p>
+    <h2>Improve</h2>
+    	<p>your outreach efforts</p>
+</div>
+
+
+
+
+<script type="text/javascript">
+var sprytextfield1 = new Spry.Widget.ValidationTextField("sprytextfield1");
+var spryconfirm1 = new Spry.Widget.ValidationConfirm("spryconfirm1", "Password");
+var sprypassword1 = new Spry.Widget.ValidationPassword("sprypassword1");
+var spryselect3 = new Spry.Widget.ValidationSelect("spryselect3");
+</script>
+</body>
+</html>

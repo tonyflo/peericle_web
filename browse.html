@@ -1,0 +1,250 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ScienceShare-Geology</title>
+
+<style>
+
+#navbar a, li, ul, a{
+	font: Tahoma, Geneva, sans-serif;
+	list-style-type:none;	
+	font-size:16px;
+	text-decoration:none;
+	color:#000;
+	background-color:#CCC;
+}
+
+#cover {
+	background-color:#CCC;
+}
+#sortbar {
+	background-color:#CCC;	
+}
+#results {
+	background-color:#CCC;	
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION BAR -->
+<nav>
+    <ul>
+    	<li id="navbar">ScienceShare</li>
+		<form action="" method="get" name="Search">
+        <input name="Search" type="text" value="" size="80" maxlength="300" />
+    	<input name="Search" type="submit" value="Search" />
+        </form>
+        <li id="navbar"><a href="index.html">Home</a></li>
+    	<li id="navbar"><a href="profile.html">Profile</a></li>
+    	<li id="navbar"><a href="login.html">Log in</a></li>        
+    </ul>
+</nav>
+
+
+<!-- Cover Section -->
+<div id="cover">
+    <h2>Cover</h2>
+<a href="img/Geology.JPG"><img src="img/Geology.JPG" width="780" height="520" alt="Geology" /></a>
+<a href="browse.html"><h3>Geology</h3></a>
+</div>
+
+
+<!-- Sorting Bar -->
+<div id="sortbar">
+  <h2>Sorting Bar</h2>
+  <form id="form1" name="form1" method="post" action="">
+    <p>
+      <label>
+        <input type="radio" name="Sortingbar" value="Newest" id="Sortingbar_0" />
+        Newest</label>
+      <br />
+      <label>
+        <input type="radio" name="Sortingbar" value="Highest Rated" id="Sortingbar_1" />
+        Highest Rated</label>
+      <br />
+      <label>
+        <input type="radio" name="Sortingbar" value="Controversial" id="Sortingbar_2" />
+        Controversial</label>
+      <br />
+      <label>
+        <input type="radio" name="Sortingbar" value="Favorites" id="Sortingbar_3" />
+        Favorites</label>
+      <br />
+      <label>
+        <input type="radio" name="Sortingbar" value="Trending" id="Sortingbar_4" />
+        Trending</label>
+      <br />
+      <label>
+        <input type="radio" name="Sortingbar" value="Rising" id="Sortingbar_5" />
+        Rising</label>
+      <br />
+    </p>
+  </form>
+  <br />
+  <br />
+  <br />
+  <br />
+  
+  <h2>Topic Selection:</h2>  
+  <form id="form2" name="form2" method="post" action="">
+    <p>
+      <label>
+        <input type="radio" name="Topic Selection" value="Biology" id="TopicSelection_2" />
+        Biology</label>
+      <br />
+      <label>
+        <input type="radio" name="Topic Selection" value="Geology" id="TopicSelection_3" />
+        Geology</label>
+      <br />
+      <label>
+        <input type="radio" name="Topic Selection" value="Chemistry" id="TopicSelection_4" />
+        Chemistry</label>
+      <br />
+      <label>
+        <input type="radio" name="Topic Selection" value="Physics" id="TopicSelection_5" />
+        Physics</label>
+      <br />
+      <label>
+        <input type="radio" name="Topic Selection" value="Engineering" id="TopicSelection_6" />
+        Engineering</label>
+      <br />
+      <label>
+        <input type="radio" name="Topic Selection" value="Environmental Science" id="TopicSelection_7" />
+        Environmental Science</label>
+      <br />
+      <label>
+        <input type="radio" name="Topic Selection" value="Oceanography" id="TopicSelection_8" />
+        Oceanography</label>
+      <br />
+      <label>
+        <input type="radio" name="Topic Selection" value="Astronomy" id="TopicSelection_9" />
+        Astronomy</label>
+      <br />
+      <label>
+        <input type="radio" name="Topic Selection" value="Biochemistry" id="TopicSelection_10" />
+        Biochemistry</label>
+      <br />
+      <label>
+        <input type="radio" name="Topic Selection" value="Medical" id="TopicSelection_11" />
+        Medical</label>
+      <br />
+      <label>
+        <input type="radio" name="Topic Selection" value="Psychology" id="TopicSelection_12" />
+        Psychology</label>
+      <br />
+      <label>
+        <input type="radio" name="Topic Selection" value="Sociology" id="TopicSelection_13" />
+        Sociology</label>
+      <br />
+      <label>
+        <input type="radio" name="Topic Selection" value="Anatomy" id="TopicSelection_14" />
+        Anatomy</label>
+      <br />
+      <label>
+        <input type="radio" name="Topic Selection" value="Climate Science" id="TopicSelection_15" />
+        Climate Science</label>
+      <br />
+      <label>
+        <input type="radio" name="Topic Selection" value="Meterorology" id="TopicSelection_16" />
+        Meteorology</label>
+      <br />
+      <label>
+        <input type="radio" name="Topic Selection" value="Anthropology" id="TopicSelection_17" />
+        Anthropology</label>
+      <br />
+      <label>
+        <input type="radio" name="Topic Selection" value="Archeology" id="TopicSelection_18" />
+        Archeology</label>
+      <br />
+      <label>
+        <input type="radio" name="Topic Selection" value="Neuroscience" id="TopicSelection_19" />
+        Neuroscience</label>
+      <br />
+      <label>
+        <input type="radio" name="Topic Selection" value="Computer Science" id="TopicSelection_20" />
+        Computer Science</label>
+      <br />
+      <label>
+        <input type="radio" name="Topic Selection" value="Mathematics" id="TopicSelection_21" />
+        Mathematics</label>
+      <br />
+    </p>
+  </form>
+  <br />
+  <br />
+  <br />
+  <br />
+  
+  <h2>Saved Posts</h2>
+  <ul>
+  	<li><a href="profile.html">Nick Mathews</a>, <a href="project.html">OSNAP</a> <a href="view.html">"Leaving Greenland"</a></li>
+  	<li><a href="profile.html">Nick Mathews</a>, <a href="project.html">JOCMS</a> <a href="view.html">"Lost the AUV Sentry"</a></li>
+  	<li><a href="profile.html">Nick Mathews</a>, <a href="project.html">OSNAP</a> <a href="view.html">"What is a CTD?"</a></li>
+  	<li><a href="profile.html">Nick Mathews</a>, <a href="project.html">JOCMS</a> <a href="view.html">"Heading to Guam"</a></li>
+  	<li><a href="profile.html">Nick Mathews</a>, <a href="project.html">OSNAP</a> <a href="view.html">"Hurricane A-blowin!"</a></li>
+  </ul>
+</div>
+
+<!-- Results -->
+<div id="results">
+  <h2>Results</h2>
+
+<a href="profile.html"><img src="img/ProfileThumbnailPic.JPG" width="200" height="194" alt="Profile Thumbnail Pic" /></a>
+<h4><a href="profile.html">Nick Mathews</a>,  <a href="project.html">OSNAP</a></h4>
+<a href="view.html"><p>August 4, 2014</p></a>
+<a href="view.html"><p>4:00 PM</p></a>
+<h4>Blog Post: <a href="view.html">Leaving Greenland</a></h4>
+<h4>Save for Later:<input name="save" type="checkbox" value="save" /></h4>
+
+<br />
+<br />
+<br />
+
+
+<a href="profile.html"><img src="img/ProfileThumbnailPic.JPG" width="200" height="194" alt="Profile Thumbnail Pic" /></a>
+<h4><a href="profile.html">Nick Mathews</a>,  <a href="project.html">OSNAP</a></h4>
+<a href="view.html"><p>August 4, 2014</p></a>
+<a href="view.html"><p>4:00 PM</p></a>
+<h4>Blog Post: <a href="view.html">Leaving Greenland</a></h4>
+<h4>Save for Later:<input name="save" type="checkbox" value="save" /></h4>
+
+<br />
+<br />
+<br />
+
+
+<a href="profile.html"><img src="img/ProfileThumbnailPic.JPG" width="200" height="194" alt="Profile Thumbnail Pic" /></a>
+<h4><a href="profile.html">Nick Mathews</a>,  <a href="project.html">OSNAP</a></h4>
+<a href="view.html"><p>August 4, 2014</p></a>
+<a href="view.html"><p>4:00 PM</p></a>
+<h4>Blog Post: <a href="view.html">Leaving Greenland</a></h4>
+<h4>Save for Later:<input name="save" type="checkbox" value="save" /></h4>
+
+<br />
+<br />
+<br />
+
+
+<a href="profile.html"><img src="img/ProfileThumbnailPic.JPG" width="200" height="194" alt="Profile Thumbnail Pic" /></a>
+<h4><a href="profile.html">Nick Mathews</a>,  <a href="project.html">OSNAP</a></h4>
+<a href="view.html"><p>August 4, 2014</p></a>
+<a href="view.html"><p>4:00 PM</p></a>
+<h4>Blog Post: <a href="view.html">Leaving Greenland</a></h4>
+<h4>Save for Later:<input name="save" type="checkbox" value="save" /></h4>
+
+<br />
+<br />
+<br />
+
+</div>
+
+
+
+
+
+</body>
+</html>

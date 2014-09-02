@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ScienceShare-New Project</title>
+
+<style>
+#navbar a, li, ul, a{
+	font: Tahoma, Geneva, sans-serif;
+	font-size:16px;
+	text-decoration:none;
+	color:#000;
+	list-style-type:none;
+	background-color:#CCC;
+}
+#mediaup {
+	background-color:#CCC;	
+}
+#summary {
+	background-color:#CCC;	
+}
+#info {
+	background-color:#CCC;	
+}
+#team {
+	background-color:#CCC;	
+}
+
+
+
+</style>
+<link href="SpryAssets/SpryValidationSelect.css" rel="stylesheet" type="text/css" />
+<script src="SpryAssets/SpryValidationSelect.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+<!-- NAVIGATION BAR -->
+<nav>
+    <ul>
+    	<li id="navbar">ScienceShare</li>
+		<form action="" method="get" name="Search">
+        <input name="Search" type="text" value="" size="80" maxlength="300" />
+    	<input name="Search" type="submit" value="Search" />
+        </form>
+    	<li id="navbar"><a href="index.html">Home</a></li>
+    	<li id="navbar"><a href="profile.html">Profile</a></li>
+    	<li id="navbar"><a href="signup.html">Sign Up</a></li>        
+    </ul>
+</nav>
+
+
+<!-- Media Uploader -->
+<div id="mediaup">
+    <h2>Media</h2>
+<form id="form6" name="form6" method="post" action="">
+
+    <h4>Upload a Science Team Picture:</h4><input name="Profile Picture" type="file" id="profpic" title="profilepic" />    
+    <h4>Upload an Explanatory Video:</h4><input name="Profile Video" type="file" id="profvid" title="profilevid" />   
+    <br /> 
+    <br /> 
+
+<input name="Submit" type="submit" value="Submit" />
+</form>    
+</div>
+
+
+<!-- Project Summary Text Input -->
+<div id="summary">
+  <h2>Summary</h2>
+  
+<form id="form5" name="form5" method="post" action="">
+  
+  <textarea name="Summary" cols="100" rows="10" wrap="physical" id="Biography" label="Summary">Write a quick summary about the project here.</textarea>
+    <br /> 
+    <br /> 
+
+<input name="Submit" type="submit" value="Submit" />
+  
+ </form> 
+  
+</div>
+
+
+<!-- Profile your Project-->
+<div id="info">
+  <h2>Project Information</h2>
+
+<form id="form1" name="form1" method="post" action="">
+
+<h4>Project Title:</h4><input name="Title" type="text" id="Title" title="Title" value="Insert Title Here" />  
+
+<h4>Pick what genres your project belongs to:</h4>
+  <p>
+    <label>
+      <input type="checkbox" name="Genre" value="Geology" id="Genre_0" />
+      Geology</label>
+    <br />
+    <label>
+      <input type="checkbox" name="Genre" value="Oceanography" id="Genre_1" />
+      Oceanography</label>
+    <br />
+    <label>
+      <input type="checkbox" name="Genre" value="Chemistry" id="Genre_2" />
+      Chemistry</label>
+    <br />
+    <label>
+      <input type="checkbox" name="Genre" value="Physics" id="Genre_3" />
+      Physics</label>
+    <br />
+    <label>
+      <input type="checkbox" name="Genre" value="Biology" id="Genre_4" />
+      Biology</label>
+    <br />
+    <label>
+      <input type="checkbox" name="Genre" value="Social Sciences" id="Genre_5" />
+      Social Sciences</label>
+    <br />
+  </p>
+
+<h4>Pick which Institutions were involved in this project:</h4>
+  <label>
+    <input type="checkbox" name="Institution" value="Kutztown University of Pennsylvania" id="Institution_0" />
+    Kutztown University of Pennsylvania</label>
+  <br />
+  <label>
+    <input type="checkbox" name="Institution" value="Pennsylvania State University" id="Institution_1" />
+    Pennsylvania State University</label>
+  <br />
+  <label>
+    <input type="checkbox" name="Institution" value="University of Hawaii" id="Institution_2" />
+    University of Hawaii</label>
+  <br />
+  <label>
+    <input type="checkbox" name="Institution" value="Woods Hole Oceanographic Institution" id="Institution_3" />
+    Woods Hole Oceanographic Institution</label>
+  <br />
+  <label>
+    <input type="checkbox" name="Institution" value="Texas A&M" id="Institution_4" />
+    Texas AM</label>
+
+  <br />
+  <br /> 
+
+
+<input name="Submit" type="submit" value="Submit" />
+</form>
+</div>
+
+
+
+
+<!-- Add Science Team -->
+<div id="team">
+  <h2>Science Team</h2>
+  
+  <form id="form3" name="form3" method="post" action="">
+  <h4>Who is the Principle Investigator?</h4>
+
+    <p>
+      <span id="spryselect1">
+      <label for="ChoosePI"></label>
+      <select name="ChoosePI" id="ChoosePI">
+      	<option value="Adrienne Oakley">Adrienne Oakley</option>
+      	<option value="Nick Mathews">Nick Mathews</option>
+      	<option value="Thomas Bond">Thomas Bond</option>
+      	<option value="Jen Herting">Jen Herting</option>
+      	<option value="Dani Moyer">Dani Moyer</option>
+      </select>
+    <span class="selectRequiredMsg">Please select an item.</span></span> </p>
+
+  <h4>Who is the Co-Principle Investigator?</h4>
+    <p>
+      <span id="spryselect1">
+      <label for="ChoosePI"></label>
+      <select name="ChoosePI" id="ChoosePI">
+      	<option value="Adrienne Oakley">Adrienne Oakley</option>
+      	<option value="Nick Mathews">Nick Mathews</option>
+      	<option value="Thomas Bond">Thomas Bond</option>
+      	<option value="Jen Herting">Jen Herting</option>
+      	<option value="Dani Moyer">Dani Moyer</option>
+      </select>
+    <span class="selectRequiredMsg">Please select an item.</span></span> </p>
+
+
+<h4>Who else was on the science team?</h4>    
+      <p>
+        <label>
+          <input type="checkbox" name="Collaborators" value="Adrienne Oakley" id="Collaborators_0" />
+          Adrienne Oakley</label>
+        <br />
+        <label>
+          <input type="checkbox" name="Collaborators" value="Nick Mathews" id="Collaborators_1" />
+          Nick Mathews</label>
+        <br />
+        <label>
+          <input type="checkbox" name="Collaborators" value="Thomas Bond" id="Collaborators_2" />
+          Thomas Bond</label>
+        <br />
+        <label>
+          <input type="checkbox" name="Collaborators" value="Jen Herting" id="Collaborators_3" />
+          Jen Herting</label>
+        <br />
+        <label>
+          <input type="checkbox" name="Collaborators" value="Dani Moyer" id="Collaborators_4" />
+          Dani Moyer</label>
+        <br />
+      </p>
+<input name="Submit" type="submit" value="Submit" />
+
+  </form>
+</div>
+
+<br />
+<br />
+<br />
+
+
+<a href="project.html" title="Continue">Continue</a>
+
+
+<script type="text/javascript">
+var spryselect1 = new Spry.Widget.ValidationSelect("spryselect1");
+</script>
+</body>
+</html>

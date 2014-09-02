@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ScienceShare-New Profile</title>
+
+<style>
+#navbar a, li, ul, a{
+	font: Tahoma, Geneva, sans-serif;
+	font-size:16px;
+	text-decoration:none;
+	color:#000;
+	list-style-type:none;
+	background-color:#CCC;
+}
+#mediaup {
+	background-color:#CCC;	
+}
+#bio {
+	background-color:#CCC;	
+}
+#proj {
+	background-color:#CCC;	
+}
+#collab {
+	background-color:#CCC;	
+}
+
+</style>
+<link href="SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css" />
+<link href="SpryAssets/SpryValidationTextarea.css" rel="stylesheet" type="text/css" />
+<script src="SpryAssets/SpryValidationTextField.js" type="text/javascript"></script>
+<script src="SpryAssets/SpryValidationTextarea.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+<!-- NAVIGATION BAR -->
+<nav>
+    <ul>
+    	<li id="navbar">ScienceShare</li>
+		<form action="" method="get" name="Search">
+        <input name="Search" type="text" value="" size="80" maxlength="300" />
+    	<input name="Search" type="submit" value="Search" />
+        </form>
+    	<li id="navbar"><a href="index.html">Home</a></li>
+    	<li id="navbar"><a href="profile.html">Profile</a></li>
+    	<li id="navbar"><a href="signup.html">Sign Up</a></li>        
+    </ul>
+</nav>
+
+<h1>Create your Profile</h1>
+
+<!-- Media Uploader -->
+<div id="mediaup">
+    <h2>Media</h2>
+
+
+
+
+
+<form id="form1" name="form1" method="post" action="">
+
+    <h4>Upload a Profile Picture:</h4><input name="Profile Picture" type="file" id="profpic" title="profilepic" />    
+    <h4>Upload a Profile Video:</h4><input name="Profile Video" type="file" id="profvid" title="profilevid" />    
+<br />
+<br />
+<input name="Submit" type="submit" value="Submit" />
+</form>
+    
+</div>
+
+
+<!-- Biography Text Input -->
+<div id="bio">
+  <h2>Bio</h2>
+
+<form id="form1" name="form1" method="post" action="">
+
+<span id="sprytextarea2">
+<h4>Biography</h4>
+<textarea name="Biography" id="Biography" cols="75" rows="10"></textarea>
+<span class="textareaRequiredMsg">Please write a little about yourself.</span></span>
+  <br />
+  <br />
+
+<input name="Submit" type="submit" value="Submit" />
+
+</form>
+
+</div>
+
+
+<!-- Find Projects -->
+<div id="proj">
+  <h2>Projects</h2>
+  
+  <form id="form1" name="form1" method="post" action="">
+  <h4>Which Projects have you been involved in?</h4>
+
+      <p>
+        <label>
+          <input type="checkbox" name="Projects" value="JOCMS 2011" id="Projects_0" />
+          JOCMS 2011</label>
+        <br />
+        <label>
+          <input type="checkbox" name="Projects" value="MOORSPICE 2014" id="Projects_1" />
+          MOORSPICE 2014</label>
+        <br />
+        <label>
+          <input type="checkbox" name="Projects" value="OSNAP 2014" id="Projects_2" />
+          OSNAP 2014</label>
+        <br />
+        <label>
+          <input type="checkbox" name="Projects" value="WaveChasers 2014" id="Projects_3" />
+          WaveChasers 2014</label>
+        <br />
+        <label>
+          <input type="checkbox" name="Projects" value="HOTS" id="Projects_4" />
+          HOTS</label>
+        <br />
+        <label>
+          <input type="checkbox" name="Projects" value="CMORE" id="Projects_5" />
+          CMORE</label>
+        <br />
+        <label>
+          <input type="checkbox" name="Projects" value="SCOPE" id="Projects_6" />
+          SCOPE</label>
+        <br />
+      </p>
+<input name="Submit" type="submit" value="Submit" />
+
+  </form>
+</div>
+
+
+
+
+<!-- Find Collaborators -->
+<div id="collab">
+  <h2>Collaborators</h2>
+
+  <form id="form2" name="form2" method="post" action="">
+  <h4>Do you know any of these people?</h4>    
+
+      <p>
+        <label>
+          <input type="checkbox" name="Collaborators" value="Adrienne Oakley" id="Collaborators_0" />
+          Adrienne Oakley</label>
+        <br />
+        <label>
+          <input type="checkbox" name="Collaborators" value="Nick Mathews" id="Collaborators_1" />
+          Nick Mathews</label>
+        <br />
+        <label>
+          <input type="checkbox" name="Collaborators" value="Thomas Bond" id="Collaborators_2" />
+          Thomas Bond</label>
+        <br />
+        <label>
+          <input type="checkbox" name="Collaborators" value="Jen Herting" id="Collaborators_3" />
+          Jen Herting</label>
+        <br />
+        <label>
+          <input type="checkbox" name="Collaborators" value="Dani Moyer" id="Collaborators_4" />
+          Dani Moyer</label>
+        <br />
+      </p>
+<input name="Submit" type="submit" value="Submit" />
+
+  </form>
+</div>
+<br />
+<br />
+<br />
+
+<a href="profile.html" title="Continue">Continue</a>
+
+
+<script type="text/javascript">
+var sprytextarea2 = new Spry.Widget.ValidationTextarea("sprytextarea2");
+</script>
+</body>
+</html>
