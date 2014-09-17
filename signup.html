@@ -1,5 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php echo('<?xml version = "1.0"  encoding = "utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+'); ?>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>ScienceShare-Register</title>
@@ -14,13 +18,13 @@
 	background-color:#CCC;
 }
 #vidbox {
-	background-color:#CCC;	
+	background-color:#CCC;
 }
 #regbox {
-	background-color:#CCC;	
+	background-color:#CCC;
 }
 #keypoints {
-	background-color:#CCC;	
+	background-color:#CCC;
 }
 
 </style>
@@ -48,7 +52,7 @@
         </form>
     	<li id="navbar"><a href="index.html">Home</a></li>
     	<li id="navbar"><a href="profile.html">Profile</a></li>
-    	<li id="navbar"><a href="signup.html">Sign Up</a></li>        
+    	<li id="navbar"><a href="signup.html">Sign Up</a></li>
     </ul>
 </nav>
 
@@ -60,85 +64,52 @@
 
 <!-- Registration Box -->
 <div id="regbox">
-	<h2>Create your account</h2>
-<form action="submit.php" method="get" name="Registration">
-<!-- First -->
-  <span id="sprytextfield1">
-    	<label for="First">First:</label>
-    	<input type="text" name="First" id="First" />
-    	<span class="textfieldRequiredMsg">Type your first name here.</span></span>
-<br />
+    <form action = "signedup.php" method = "post">
+		<h2>Create your account</h2>
 
-<!-- Last -->
-   	  <span id="sprytextfield1">
-    	<label for="Last">Last:</label>
-    	<input type="text" name="Last" id="Last" />
-    	<span class="textfieldRequiredMsg">Type your last name here.</span></span>
-<br />
+		<!-- Collect user information -->
+		<table>
+		<!-- TODO: title ex: mr, mrs (so we know gender) -->
+		<tr>
+			<td> First Name: </td>
+			<td>
+				<input type = "text"  name = "first_name" size = "20" maxlength = "35" />
+			</td>
+		</tr>
+		<tr>
+			<td> Last Name: </td>
+			<td>
+				<input type = "text"  name = "last_name" size = "20" maxlength = "35" />
+			</td>
+		</tr>
+		<tr>
+			<td> Phone Number: </td>
+			<td>
+				<input type="tel" name="phone_number">
+			</td>
+		</tr>
+		<tr>
+			<td> Email: </td>
+			<td>
+				<input type = "email"  name = "email" size = "20" maxlength = "255"/>
+			</td>
+		</tr>
+		<tr>
+			<td> Birthday: </td>
+			<td>
+				<input type="date" name="birthday">
+			</td>
+		</tr>
+		<!-- TODO: role -->
 
-<!-- Email -->
-   	  <span id="sprytextfield1">
-    	<label for="Email">Email:</label>
-    	<input type="email" name="Email" id="Email" />
-    	<span class="textfieldRequiredMsg">Type your email here.</span></span>
-<br />
+		</table>
 
-<!-- Password -->
-    <span id="sprypassword1">
-    <label for="Password">Password:</label>
-    <input type="password" name="Password" id="Password" />
-    <span class="passwordRequiredMsg">A value is required.</span></span>
-<br />
-
-<!-- Confirm -->
-    <span id="spryconfirm1">
-    <label for="Confirm">Confirm Password:</label>
-    <input type="password" name="Confirm" id="Confirm" />
-    <span class="confirmRequiredMsg">A value is required.</span><span class="confirmInvalidMsg">The values don't match.</span></span>
-<br />
-
-<!-- Role -->
-<h3>Choose your role:</h3>
-
-<span id="spryselect3">
-<label for="role"></label>
-<select name="role" id="role">
-<option>Scientist</option>
-<option>Blogger</option>
-<option>Videographer</option>
-<option>Artist</option>
-</select>
-<span class="selectRequiredMsg">Please select an item.</span></span>
-
-
-<!-- Institution -->
-<h3>Choose your institution:</h3>
-
-<span id="spryselect3">
-<label for="role"></label>
-<select name="role" id="role">
-<option>Kutztown University of Pennsylvania</option>
-<option>Woods Hole Oceanographic Institution</option>
-<option>Texas AM</option>
-<option>University of Michigan</option>
-<option>Shippensberg University</option>
-<option>Edinboro University</option>
-<option>Albright College</option>
-<option>Alvernia University</option>
-
-</select>
-<span class="selectRequiredMsg">Please select an item.</span></span>
-
-<br />
-<br />
-
-<input name="Submit" type="reset" value="Submit" />
-<br />
-<br />
-
-<a href="newprofile.html">Continue</a>
-
-</form>
+		<!-- The submit and reset buttons -->
+		<p>
+			<input type = "submit"  value = "Sign Up" />
+			<input type = "reset"  value = "Start Over" />
+		</p>
+    </form>
 </div>
 
 <!-- What you can do on the Website -->
