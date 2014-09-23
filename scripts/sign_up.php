@@ -6,12 +6,13 @@
  */
    include "../../peericle_private/credentials.php";
    include "../../peericle_private/account.php";
+
    $table="USER";
 
    $title=$_POST["title"];
    $first_name=$_POST["first_name"];
    $last_name=$_POST["last_name"];
-   $role=-1;//$_POST["role"];
+   $role=-1;//$_POST["role"]; //TODO
    $email=$_POST["email"];
    $phone=$_POST["phone"];
    $password=$_POST["password"];

@@ -65,16 +65,41 @@ function ajax_sign_up_request()
    // Check request status
    request.onreadystatechange = function()
    {
+      var response = request.responseText;
       if (request.readyState == 4) {
-         if(request.responseText <= 0)
+         if(response <= 0)
          {
-            //the credentials that were entered were not correct
-            document.getElementById("status").innerHTML =  "Error " + request.responseText + ".";
             document.getElementById("status").style.color="red";
+            if(response == -2)
+            {
+               document.getElementById("status").innerHTML = "Email not available";
+            }
+            else if(response == -3)
+            {
+               document.getElementById("status").innerHTML = "Signing up failed";
+            }
+            else if(response == -4)
+            {
+               document.getElementById("status").innerHTML = "Missing required information";
+            }
+            else if(response == -5)
+            {
+               document.getElementById("status").innerHTML = "Email not found";
+            }
+            else if(response == -6)
+            {
+               document.getElementById("status").innerHTML = "Invalid password";
+            }
+            else
+            {
+               document.getElementById("status").innerHTML = "Unknown error";
+            }
+
          }
          else
          {
-            document.getElementById("status").innerHTML =  "Yay " + request.responseText + " EOF";
+            document.getElementById("status").innerHTML =  "You're all signed up.  Go check out the database if you don't believe me.";
+            document.getElementById("status").style.color="green";
          }
       }
    }
