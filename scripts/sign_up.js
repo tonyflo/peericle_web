@@ -1,14 +1,14 @@
 /* @file sign_up.js
  * @date 2014-09-21
  * @author Tony Florida
- * @brief Leverages ajax via javascript to support signing up
+ * @brief Leverages ajax via javascript to support sign_upg up
  */
 
 /* @brief The event handler that reacts to the sign up button being pressed
  */
 function sign_up()
 {
-   ajax_signup_request();
+   ajax_sign_up_request();
 } //end sign_up()
 
 /* @brief Create the XMLHttpRequest object, according browser
@@ -37,15 +37,23 @@ function get_XmlHttp()
  * Specifically, queries the db given an email and password and returns a valid
  * pk
  */
-function ajax_signin_request()
+function ajax_sign_up_request()
 {
    // call the function for the XMLHttpRequest instance
    var request =  get_XmlHttp();
    // create pairs index=value with data that must be sent to server
-   var  the_data = 'email='+document.getElementById("email").value+'&password='+document.getElementById("password").value;
+   var the_data = 'title=' + document.getElementById("title").value +
+	'&' + 'first_name=' + document.getElementById("first_name").value +
+	'&' + 'last_name=' + document.getElementById("last_name").value +
+	'&' + 'email=' + document.getElementById("email").value +
+	'&' + 'phone=' + document.getElementById("phone").value +
+	'&' + 'password=' + document.getElementById("password").value +
+	'&' + 'dob=' + document.getElementById("dob").value +
+	'&' + 'topic_id=' + document.getElementById("topic_id").value +
+	'&' + 'gender=' + document.getElementById("gender").value;
 
    // set the request
-   request.open("POST", "scripts/signin.php", true);
+   request.open("POST", "scripts/sign_up.php", true);
 
    //adds a header to tell the PHP script to recognize the data as is sent
    //via POST
@@ -61,59 +69,13 @@ function ajax_signin_request()
          if(request.responseText <= 0)
          {
             //the credentials that were entered were not correct
-            document.getElementById("status").innerHTML =  "Invalid username/password";
+            document.getElementById("status").innerHTML =  "Error " + request.responseText + ".";
             document.getElementById("status").style.color="red";
-            document.getElementById("map").src="images/map.png";
          }
          else
          {
-              //valid credentials were provided. now, check if the account is paid
-              ajax_account_check_request(request.responseText);
+            document.getElementById("status").innerHTML =  "Yay " + request.responseText + " EOF";
          }
       }
    }
-} //end ajax_signin_request()
-
-/* @brief Given a uid (pk), query the db to check if the account is a paid account
- * @param uid the unique identifier for the account
- * @retval the iVisited map will be displayed if the account is paid
- */
-function ajax_account_check_request(uid)
-{
-   // call the function for the XMLHttpRequest instance
-   var request =  get_XmlHttp();
-   // create pairs index=value with data that must be sent to server
-   var  the_data = 'uid='+uid;
-
-   // set the request
-   request.open("POST", "scripts/check_type.php", true);
-
-   //adds a header to tell the PHP script to recognize the data as is sent
-   //via POST
-   request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-
-   // calls the send() method with datas as parameter
-   request.send(the_data);
-
-   // Check request status
-   request.onreadystatechange = function()
-   {
-      if (request.readyState == 4) {
-         if(request.responseText <= 0)
-         {
-            //inform the user that the account must be paid to view the ivisited map
-            document.getElementById("status").innerHTML =  "Purchase States iVisited to view your map";
-            document.getElementById("status").style.color="red";
-            document.getElementById("map").src="images/map.png";
-         }
-         else
-         {
-            //display the ivisited map
-            document.getElementById("status").innerHTML = "Scroll down to see your iVisited map!";
-            document.getElementById("status").style.color="green";
-            document.getElementById("map").src="images/maps/map"+uid+".png";
-         }
-      }
-   }
-} //end ajax_account_check_request()
-
+} //end ajax_sign_up_request()

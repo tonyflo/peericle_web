@@ -6,22 +6,22 @@
  */
    include "../../peericle_private/credentials.php";
    include "../../peericle_private/account.php";
-
    $table="USER";
-   
+
    $title=$_POST["title"];
    $first_name=$_POST["first_name"];
    $last_name=$_POST["last_name"];
-   $role=$_POST["role"];
+   $role=-1;//$_POST["role"];
    $email=$_POST["email"];
    $phone=$_POST["phone"];
    $password=$_POST["password"];
    $dob=$_POST["dob"];
-   $topic_id=$_POST["topid_id"];
+   $topic_id=$_POST["topic_id"];
    $gender=$_POST["gender"];
 
-   echo function sign_up($title, $first_name, $last_name, $role, $email, $phone, $password, $dob, $topic_id, $gender, $db, $table);
+   echo sign_up($title, $first_name, $last_name, $role, $email, $phone, $password, $dob, $topic_id, $gender, $db, $table);
 
    $db->close();
+
 ?>
 

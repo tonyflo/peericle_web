@@ -1,5 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
 	<title>Peericle - Sign Up</title>
 	<script type="text/javascript" src="scripts/sign_up.js"></script>
@@ -31,18 +30,19 @@
 	<br>
 	Telephone: <input type="tel" id="phone" name="Telephone" value="">
 	<br>
-	Password: <input type="password" name="password" value="">
+	Password: <input type="password" id="password" name="password" value="">
 	<br>
-	Date of Birth: <input type="date" name="date" value="">
+	Date of Birth: <input type="date" id="dob" name="date" value="">
 	<br>
-	Topic: <select name="Topic" id="topic"><br>
+	Topic: <select name="Topic" id="topic_id"><br>
 	<?php
 		include "helpers/topic.php";
 	?>
 	</select>
-
 </form>
 <button onclick="sign_up()" id="sign_up">Sign Up</button>
+
+<p id="status"></p>
 
 </body>
 </html>
