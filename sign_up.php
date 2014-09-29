@@ -2,6 +2,8 @@
 <head>
 	<title>Peericle - Sign Up</title>
 	<script type="text/javascript" src="scripts/sign_up.js"></script>
+	<meta name="description" content="Allows user to sign up.">
+	<meta name="author" content="Tony Florida">
 </head>
 <body>
 <form action="">

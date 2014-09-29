@@ -1,17 +1,17 @@
-/* @file sign_up.js
- * @date 2014-09-21
+/* @file sign_in.js
+ * @date 2014-09-29
  * @author Tony Florida
- * @brief Leverages ajax via javascript to support sign up
+ * @brief Leverages ajax via javascript to support sign in
  */
 
 /* @brief The event handler that reacts to the sign up button being pressed
  */
-function sign_up()
+function sign_in()
 {
    document.getElementById("status").style.color="blue";
    document.getElementById("status").innerHTML = "Working...";
-   ajax_sign_up_request();
-} //end sign_up()
+   ajax_sign_in_request();
+} //end sign_in()
 
 /* @brief Create the XMLHttpRequest object, according browser
  */
@@ -39,23 +39,16 @@ function get_XmlHttp()
  * Specifically, queries the db given an email and password and returns a valid
  * pk
  */
-function ajax_sign_up_request()
+function ajax_sign_in_request()
 {
    // call the function for the XMLHttpRequest instance
    var request =  get_XmlHttp();
    // create pairs index=value with data that must be sent to server
-   var the_data = 'title=' + document.getElementById("title").value +
-	'&' + 'first_name=' + document.getElementById("first_name").value +
-	'&' + 'last_name=' + document.getElementById("last_name").value +
-	'&' + 'email=' + document.getElementById("email").value +
-	'&' + 'phone=' + document.getElementById("phone").value +
-	'&' + 'password=' + document.getElementById("password").value +
-	'&' + 'dob=' + document.getElementById("dob").value +
-	'&' + 'topic_id=' + document.getElementById("topic_id").value +
-	'&' + 'gender=' + document.getElementById("gender").value;
+   var the_data = 'email=' + document.getElementById("email").value +
+	'&' + 'password=' + document.getElementById("password").value;
 
    // set the request
-   request.open("POST", "scripts/sign_up.php", true);
+   request.open("POST", "scripts/sign_in.php", true);
 
    //adds a header to tell the PHP script to recognize the data as is sent
    //via POST
@@ -72,19 +65,7 @@ function ajax_sign_up_request()
          if(response <= 0)
          {
             document.getElementById("status").style.color="red";
-            if(response == -2)
-            {
-               document.getElementById("status").innerHTML = "Email not available";
-            }
-            else if(response == -3)
-            {
-               document.getElementById("status").innerHTML = "Signing up failed";
-            }
-            else if(response == -4)
-            {
-               document.getElementById("status").innerHTML = "Missing required information";
-            }
-            else if(response == -5)
+            if(response == -5)
             {
                document.getElementById("status").innerHTML = "Email not found";
             }
@@ -96,13 +77,12 @@ function ajax_sign_up_request()
             {
                document.getElementById("status").innerHTML = "Unknown error";
             }
-
          }
          else
          {
-            document.getElementById("status").innerHTML =  "You're all signed up. Sign in <a href='sign_in.php'>here</a>.";
+            document.getElementById("status").innerHTML =  "Welcome";
             document.getElementById("status").style.color="green";
          }
       }
    }
-} //end ajax_sign_up_request()
+} //end ajax_sign_in_request()
