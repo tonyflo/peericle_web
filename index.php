@@ -15,9 +15,8 @@
 
 <div id="wrapper">
 
-  <!--Favorites SideBar -->        
+  <!--Favorites SideBar -->
   <div id="favswrapper">
-      	
         <div class="favs">
         	<h2>Favorites</h2>
             	<h3>People</h3>
